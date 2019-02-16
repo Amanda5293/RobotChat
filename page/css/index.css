@@ -1,0 +1,101 @@
+/*重置部分*/
+*{
+    margin:0;
+    padding: 0;
+}
+input,button{
+    outline: none;
+}
+
+
+.container{
+    position: relative;
+    width: 400px;
+    height: 650px;
+    margin:0 auto;
+    background-color:#f0f8ff;
+}
+/*头部*/
+.container .header{
+    height: 60px;
+    line-height: 60px;
+    font-size: 26px;
+    text-align: center;
+    background-color: #008080;
+    color: #fff;
+}
+
+/*内容区域*/
+.container .content{
+    height: 540px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+}
+.container .content .chatting-person{
+    padding: 7px 7px 0;
+}
+.content .chatting-person::after{
+    content: '';
+    display: block;
+    clear:both;
+}
+.chatting-person.user .avatar,
+.chatting-person.user .chat-text{
+    float: right;
+}
+.chatting-person .avatar{
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.avatar.person{
+    background-image: url('../img/avatar.png');
+}
+.avatar.robot{
+    background-image: url('../img/robot2.png');
+}
+.chatting-person .chat-text{
+    display: inline-block;
+    vertical-align:top;
+    padding: 7px 10px;
+    max-width: 230px;
+    line-height: 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #00a3f0;
+    color: #fff;
+}
+
+/*底部输入部分*/
+.container .input-container{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+}
+.container .input-container input{
+    float: left;
+    box-sizing: border-box;
+    height: 40px;
+    width: 80%;
+    padding-left: 10px;
+    line-height: 40px;
+    font-size: 18px;
+    border-color: #008080;
+    border-width: 1px;
+}
+.container .input-container .btn{
+    height: 40px;
+    width: 20%;
+    border: none;
+    font-size: 18px;
+    background-color: #008080;
+    color: #fff;
+    cursor:pointer;
+}
